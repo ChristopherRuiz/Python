@@ -17,8 +17,8 @@ def easy_game(game_list):
 
   # Printing out blank spaces for the letters in the word
   for i in range(word_count):
-        guess_list.append("_")
-        print("_", end=' ')
+    guess_list.append("_")
+    print("_", end=' ')
   print("\n")
 
   # While loop to iterate  until all guesses have been used(game over) or the user guesses the word correctly 
