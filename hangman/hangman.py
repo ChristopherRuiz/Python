@@ -28,26 +28,33 @@ def easy_game(game_list):
     # If letter guessed is in the word list(word_char), then insert the value in the guess_list at the index the letter was found in the word list
     if guess.lower() in word_char:
       print("Correct!", guess.lower(), "is in the word")
-
-      # add the letter to the guess list at the index taken from the word character list (word_char)
       guess_list[word_char.index(guess)] = guess      
 
-      # print out the updated word
+      # print out the updated game board
       for i in guess_list:
         print(i, end=' ')
 
       print("\n")
       word_count -= 1
 
-     
-      
-
+      # Exit game when won
+      if word_count == 0:
+        print("You won!")
+        break
+    
     elif guess.lower() not in word_char:
       print(guess.lower(),"is not in the word")
+      
+      # print current guessed letters in word
       for i in guess_list:
         print(i, end=' ')
       print("\n")
-    guess_count += 1
+      guess_count += 1
+
+      # Exit game when lost
+      if guess_count == 6:
+        print("You Lost...")
+        break
 
         
 
