@@ -41,7 +41,7 @@ graphic = ['''
    / \  |
       ===''']
 
-# Draw the character in a 2d Array given different guessesA
+# Draw the character given different guessesA
 def draw_current(guesses):
   if guesses == 0:
     print(graphic[0])
